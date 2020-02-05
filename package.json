@@ -1,0 +1,30 @@
+{
+  "name": "root",
+  "private": true,
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/ribblejs/ribble.git",
+  "author": "devdigital <devdigital.cloud@gmail.com>",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "scripts": {
+    "commit": "./node_modules/cz-customizable/standalone.js",
+    "test": ":lerna run test --scope={@ribble/layout",
+    "clean": "lerna clean",
+    "bootstrap": "lerna bootstrap",
+    "lerna-link": "lerna link",
+    "prepare": "lerna run prepare",
+    "release": "lerna publish",
+    "release:canary": "lerna publish --canary",
+    "release:next": "lerna publish --dist-tag=next --bump=prerelease",
+    "diff": "lerna diff",
+    "changed": "lerna changed"
+  },
+  "devDependencies": {
+    "cz-customizable": "^6.2.0",
+    "lerna": "^3.18.5"
+  }
+}

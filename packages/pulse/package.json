@@ -1,0 +1,55 @@
+{
+  "name": "storybook-addon-pulse",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Dynamic resizing for responsive design.",
+  "source": "src/index.js",
+  "main": "dist/storybook-addon-pulse.js",
+  "module": "dist/storybook-addon-pulse.esm.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devdigital/storybook-addon-pulse.git",
+    "directory": "packages/code"
+  },
+  "homepage": "https://github.com/devdigital/storybook-addon-pulse/tree/master/packages/layout#readme",
+  "scripts": {
+    "clean": "yarn cache clean",
+    "prepare": "microbundle --no-compress -o dist",
+    "watch": "microbundle watch --no-compress -o dist",
+    "storybook": "start-storybook",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.27",
+    "@storybook/addons": "^5.3.12",
+    "@storybook/api": "^5.3.12",
+    "@storybook/client-logger": "^5.3.12",
+    "@storybook/components": "^5.3.12",
+    "@storybook/core-events": "^5.3.12",
+    "@storybook/theming": "^5.3.12",
+    "@utilz/types": "^0.1.11",
+    "theme-ui": "^0.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "babel-jest": "^25.1.0",
+    "babel-loader": "^8.0.6",
+    "jest": "^25.1.0",
+    "microbundle": "^0.11.0",
+    "prettier": "^1.19.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
