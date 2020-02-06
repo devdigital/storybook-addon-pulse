@@ -1,7 +1,6 @@
 {
   "name": "storybook-addon-pulse",
   "version": "0.1.0",
-  "private": true,
   "description": "Dynamic resizing for responsive design.",
   "source": "src/index.js",
   "main": "dist/storybook-addon-pulse.js",
@@ -12,7 +11,7 @@
     "url": "https://github.com/devdigital/storybook-addon-pulse.git",
     "directory": "packages/code"
   },
-  "homepage": "https://github.com/devdigital/storybook-addon-pulse/tree/master/packages/layout#readme",
+  "homepage": "https://github.com/devdigital/storybook-addon-pulse/tree/master/packages/pulse#readme",
   "scripts": {
     "clean": "yarn cache clean",
     "prepare": "microbundle --no-compress -o dist",
