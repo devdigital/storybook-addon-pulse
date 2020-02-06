@@ -7,7 +7,7 @@ import { STORY_CHANGED } from '@storybook/core-events'
 const PulseIcon = ({ ...props }) => (
   <svg {...props} viewBox="0 0 1024 1024">
     <polyline
-      points="96 750 224 750 352 238 480 1006 608 558 672 750 800 750"
+      points="96 760 224 760 352 248 480 1016 608 568 672 760 800 760"
       style={{
         fill: 'none',
         strokeLinecap: 'round',
@@ -17,7 +17,7 @@ const PulseIcon = ({ ...props }) => (
     />
     <circle
       cx="864"
-      cy="750"
+      cy="760"
       r="64"
       style={{
         fill: 'none',

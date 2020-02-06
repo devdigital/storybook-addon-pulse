@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { addons, makeDecorator } from '@storybook/addons'
 import { Pulse } from './Pulse'
 
-const Decorator = ({ story }) => {
+const Decorator = ({ story, options }) => {
   const [mode, setMode] = useState('paused')
   const [currentStory] = useState(story)
   const [channel] = useState(addons.getChannel())
@@ -21,13 +21,23 @@ const Decorator = ({ story }) => {
     }
   }, [])
 
-  return <Pulse mode={mode}>{currentStory}</Pulse> // TODO: options
+  const defaultOptions = {
+    minWidth: '300px',
+    maxWidth: '100%',
+    timeInSeconds: 3,
+  }
+
+  return (
+    <Pulse mode={mode} {...Object.assign({}, defaultOptions, options)}>
+      {currentStory}
+    </Pulse>
+  )
 }
 
 export const withPulse = makeDecorator({
   name: 'withPulse',
   parameterName: 'pulse',
   wrapper: (getStory, context, { options }) => {
-    return <Decorator story={getStory(context)} /> // TODO: options
+    return <Decorator story={getStory(context)} options={options} />
   },
 })
