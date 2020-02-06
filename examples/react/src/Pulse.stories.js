@@ -1,5 +1,4 @@
 import React from 'react'
-import { addDecorator } from '@storybook/react'
 import { withPulse } from 'storybook-addon-pulse'
 
 export default {

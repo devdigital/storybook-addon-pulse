@@ -9,8 +9,6 @@ const Decorator = ({ story }) => {
   const [channel] = useState(addons.getChannel())
 
   useEffect(() => {
-    //channel.emit('pulse/check-status')
-
     const handleModeChange = mode => {
       setMode(mode)
     }
