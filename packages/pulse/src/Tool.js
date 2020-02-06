@@ -17,7 +17,7 @@ export const Tool = ({ channel }) => {
   return (
     <IconButton
       key="pulse-control"
-      title={mode === 'paused' ? 'Play' : 'Pause'}
+      title={mode === 'paused' ? 'Pulse - Play' : 'Pulse - Pause'}
       onClick={() => setAndEmitMode(mode === 'paused' ? 'playing' : 'paused')}
       mode={mode}
     >

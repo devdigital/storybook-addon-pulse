@@ -33,8 +33,7 @@
     "@storybook/components": "^5.3.12",
     "@storybook/core-events": "^5.3.12",
     "@storybook/theming": "^5.3.12",
-    "@utilz/types": "^0.1.11",
-    "theme-ui": "^0.3.1"
+    "@utilz/types": "^0.1.11"
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",

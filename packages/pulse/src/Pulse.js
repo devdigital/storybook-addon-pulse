@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import { jsx, Box } from 'theme-ui'
-import { keyframes } from '@emotion/core'
+import { jsx, keyframes } from '@emotion/core'
 
 export const Pulse = ({
   minWidth,
@@ -9,22 +8,24 @@ export const Pulse = ({
   mode,
   children,
 }) => {
-  const squeeze = keyframes({
+  const pulse = keyframes({
     '0%': { width: maxWidth },
     '100%': { width: minWidth },
   })
 
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-      <Box
-        sx={{
-          animation: `${timeInSeconds}s linear infinite alternate ${squeeze}`,
+    <div
+      css={{ display: 'flex', margin: 0, padding: 0, justifyContent: 'center' }}
+    >
+      <div
+        css={{
+          animation: `${timeInSeconds}s linear infinite alternate ${pulse}`,
           animationPlayState: mode === 'paused' ? 'paused' : 'running',
         }}
       >
         {children}
-      </Box>
-    </Box>
+      </div>
+    </div>
   )
 }
 
@@ -32,5 +33,5 @@ Pulse.defaultProps = {
   mode: 'paused',
   minWidth: '300px',
   maxWidth: '100%',
-  timeInSeconds: 5,
+  timeInSeconds: 3,
 }

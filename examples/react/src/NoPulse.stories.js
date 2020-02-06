@@ -1,11 +1,8 @@
 import React from 'react'
+import Component from './Component'
 
 export default {
   title: 'No Pulse',
 }
 
-export const withNoPulseDecorator = () => (
-  <div style={{ backgroundColor: '#f00' }}>
-    <p>No Pulse</p>
-  </div>
-)
+export const withNoPulseDecorator = () => <Component title="No Pulse" />
