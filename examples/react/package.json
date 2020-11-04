@@ -1,6 +1,6 @@
 {
   "name": "example-react",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "index.js",
   "license": "MIT",
   "private": true,
@@ -21,6 +21,6 @@
     "@storybook/react": "^6.0.28",
     "babel-loader": "^8.1.0",
     "react-is": "^17.0.1",
-    "storybook-addon-pulse": "^0.1.1"
+    "storybook-addon-pulse": "^0.1.2"
   }
 }
