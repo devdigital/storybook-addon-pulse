@@ -1,8 +1,8 @@
 module.exports = {
+  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
-    {
-      stories: ['../src/**/*.stories.@(js|mdx)'],
-      name: 'storybook-addon-pulse/register',
-    },
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    'storybook-addon-pulse/register',
   ],
 }

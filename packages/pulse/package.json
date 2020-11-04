@@ -14,8 +14,8 @@
   "homepage": "https://github.com/devdigital/storybook-addon-pulse/tree/master/packages/pulse#readme",
   "scripts": {
     "clean": "yarn cache clean",
-    "prepare": "microbundle --no-compress -o dist",
-    "watch": "microbundle watch --no-compress -o dist",
+    "prepare": "microbundle --jsx React.createElement --no-compress -o dist",
+    "watch": "microbundle watch --jsx React.createElement --no-compress -o dist",
     "storybook": "start-storybook",
     "test": "jest",
     "test:watch": "jest --watchAll",
